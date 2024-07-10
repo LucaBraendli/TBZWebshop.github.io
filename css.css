@@ -15,38 +15,19 @@ body {
 }
 
 .navbar {
-    background-color: #444;
-    padding: 10px;
-    margin: 0; /* Ensure no margin at the top */
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.navbar .dropdown {
-    display: none; /* Initially hide dropdown content */
-    position: absolute;
     background-color: #444;
-    width: 100%;
-    top: 60px; /* Adjust as needed based on your navbar height */
-    left: 0;
-    z-index: 1;
-    text-align: center;
+    padding: 10px;
 }
 
-.navbar .dropdown a {
-    display: block;
-    padding: 10px 0;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.navbar .dropdown a:hover {
-    background-color: #555;
-}
-
-.navbar .dropbtn {
+.dropbtn {
     background-color: #444;
     color: white;
     padding: 14px 16px;
@@ -56,12 +37,69 @@ body {
     transition: background-color 0.3s;
 }
 
-.navbar .dropbtn:hover {
+.dropbtn:hover {
     background-color: #555;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.nav-toggle {
+    display: none; /* Hide the toggle button by default */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown {
+        display: none; /* Hide dropdowns initially on small screens */
+        margin-top: 10px;
+    }
+
+    .nav-toggle {
+        display: block; /* Show the toggle button on small screens */
+        background-color: #444;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .nav {
+        display: none; /* Hide the nav list initially on small screens */
+        width: 100%;
+    }
+
+    .nav.active {
+        display: block; /* Show the nav list when .active is added */
+    }
 }
 
 .product-wrapper {
@@ -105,7 +143,9 @@ body {
 }
 
 .detail {
-    width: 70%;
+    width: 70%; /* Set the detail view to 70% width on large screens */
+    margin: 0 auto; /* Center the detail view on large screens */
+    max-width: 900px; /* Limit the maximum width on large screens */
 }
 
 label {
@@ -114,9 +154,7 @@ label {
     margin-bottom: 5px;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -199,40 +237,4 @@ a {
 
 .footer-section a:hover {
     text-decoration: underline;
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-    }
-
-    .dropdown {
-        position: static; /* Reset position for dropdown */
-        display: none; /* Initially hide dropdown content */
-        width: 100%;
-        text-align: center;
-    }
-
-    .dropdown .dropbtn {
-        width: 100%;
-        text-align: center;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: relative;
-        background-color: #444;
-        z-index: 1;
-    }
-
-    .dropdown-content a {
-        padding: 10px 0;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
 }
