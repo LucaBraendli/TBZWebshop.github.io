@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-<div class="c"><p>Kotaktformular</p></div>
+<div class="c"><p>Kontaktformular</p></div>
 
 <div class="container">
 
@@ -75,7 +75,10 @@
 
     <section>
         <h3>Kontaktformular</h3>
-        <form action="mailto:luca.braendli@edu.tbz.ch" method="post" enctype="text/plain">
+        <form action="https://api.emailjs.com/api/v1.0/email/send" method="post">
+            <input type="hidden" name="service_id" value="service_uadk61d">
+            <input type="hidden" name="template_id" value="template_xrbfx7s">
+            <input type="hidden" name="user_id" value="fFNYYktxm7PAqD1rE">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">E-Mail:</label>
@@ -99,7 +102,7 @@
         <div class="footer-section">
             <h4>Kontakt</h4>
             <p>Email: luca.braendli@edu.tbz.ch</p>
-            <p>Telefon: +45 076 239 24 09</p>
+            <p>Telefon: +41 076 239 24 09</p>
         </div>
         <div class="footer-section">
             <h4>Folgen Sie uns</h4>
