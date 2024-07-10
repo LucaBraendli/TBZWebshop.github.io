@@ -5,63 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produkt Container</title>
     <link rel="stylesheet" href="css.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init(oDaL9HM8u8l8CfzJ-);
+        })();
+    </script>
 </head>
 <body>
 <div class="c"><p>News</p></div>
 <div class="container">
     <div class="navbar">
         <div class="p"></div>
-        <div  class="dropdown">
-            <div class="dropdown">
-                <form action="index.html" method="get">
-                    <button type="submit" class="dropbtn no-link">Beliebte Produkte</button>
-                </form>
-                <div class="dropdown-content">
-                </div>
-            </div>
+        <div class="dropdown">
+            <form action="index.html" method="get">
+                <button type="submit" class="dropbtn no-link">Beliebte Produkte</button>
+            </form>
             <br>
         </div>
-        <div  class="dropdown">
-            <div class="dropdown">
-                <button class="dropbtn">Produkte</button>
-                <div class="dropdown-content">
-                    <a href="Handys.html">Handys</a>
-                    <a href="Kopfhörer.html">Kopfhörer</a>
-                </div>
-            </div>
-            <br>
-        </div>
-        <div  class="dropdown">
-            <div class="dropdown">
-                <form action="News.html" method="get">
-                    <button type="submit" class="dropbtn no-link">News</button>
-                </form>
-                <div class="dropdown-content">
-
-                </div>
-            </div>
-            <br>
-        </div>
-        <div  class="dropdown">
-            <div class="dropdown">
-                <form action="Kontaktformular.html" method="get">
-                    <button type="submit" class="dropbtn no-link">Kontaktformular</button>
-                </form>
-                <div class="dropdown-content">
-                </div>
+        <div class="dropdown">
+            <button class="dropbtn">Produkte</button>
+            <div class="dropdown-content">
+                <a href="Handys.html">Handys</a>
+                <a href="Kopfhörer.html">Kopfhörer</a>
             </div>
             <br>
         </div>
         <div class="dropdown">
-            <div class="dropdown">
-                <form action="Warenkorb.html" method="get">
-                    <button type="submit" class="dropbtn no-link">
-                        <img src="warenkorb.png" alt="Warenkorb">
-                    </button>
-                </form>
-                <div class="dropdown-content">
-                </div>
-            </div>
+            <form action="News.html" method="get">
+                <button type="submit" class="dropbtn no-link">News</button>
+            </form>
+            <br>
+        </div>
+        <div class="dropdown">
+            <form action="Kontaktformular.html" method="get">
+                <button type="submit" class="dropbtn no-link">Kontaktformular</button>
+            </form>
+            <br>
+        </div>
+        <div class="dropdown">
+            <form action="Warenkorb.html" method="get">
+                <button type="submit" class="dropbtn no-link">
+                    <img src="warenkorb.png" alt="Warenkorb">
+                </button>
+            </form>
             <br>
         </div>
     </div>
@@ -75,12 +62,23 @@
     </form>
     <p id="message"></p>
 </div>
+
+<div class="container">
+    <h1>Newsletter Senden</h1>
+    <form id="sendNewsletterForm">
+        <label for="newsletterMessage">Nachricht:</label>
+        <textarea id="newsletterMessage" name="newsletterMessage" required></textarea>
+        <button type="button" id="sendEmailsButton">Senden</button>
+    </form>
+    <p id="sendMessage"></p>
+</div>
+
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-section">
             <h4>Kontakt</h4>
             <p>Email: luca.braendli@edu.tbz.ch</p>
-            <p>Telefon: +45 076 239 24 09</p>
+            <p>Telefon: +41 076 239 24 09</p>
         </div>
         <div class="footer-section">
             <h4>Folgen Sie uns</h4>
@@ -95,5 +93,6 @@
         </div>
     </div>
 </footer>
+<script src="scripts.js"></script>
 </body>
 </html>
