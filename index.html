@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkt Container</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+<div class="c"><p>Beliebte Produkte</p></div>
+<div class="container">
+    <div class="navbar">
+        <div class="p"></div>
+        <div class="dropdown">
+            <form action="Index.html" method="get">
+                <button type="submit" class="dropbtn no-link">Beliebte Produkte</button>
+            </form>
+            <br>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Produkte</button>
+            <div class="dropdown-content">
+                <a href="Handys.html">Handys</a>
+                <a href="Kopfhörer.html">Kopfhörer</a>
+            </div>
+            <br>
+        </div>
+        <div class="dropdown">
+            <form action="News.html" method="get">
+                <button type="submit" class="dropbtn no-link">News</button>
+            </form>
+            <br>
+        </div>
+        <div class="dropdown">
+            <form action="Kontaktformular.html" method="get">
+                <button type="submit" class="dropbtn no-link">Kontaktformular</button>
+            </form>
+            <br>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <form action="Warenkorb.html" method="get">
+                    <button type="submit" class="dropbtn no-link">
+                        <img src="warenkorb.png" alt="Warenkorb">
+                    </button>
+                </form>
+                <div class="dropdown-content">
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<div class="product-wrapper">
+    <div class="product">
+        <a href="Iphone%2015.html">
+            <h2>Iphone 15</h2>
+            <img src="Handys/Iphone_15_1.jpg" alt="Produktbild">
+            <p>800 Fr.</p>
+            <p>Arbeitsspeicher 8 GB</p>
+            <p>Artikelnummer: 983</p>
+            <p>Hersteller: Apple</p>
+            <p>Release Datum: 22.6.2024</p>
+        </a>
+        <button class="add-to-cart" onclick="addToCart({img: 'Handys/Iphone_15_1.jpg',name: 'Iphone 15', price: '800 Fr.'})">Zum Warenkorb hinzufügen</button>
+    </div>
+    <div class="product">
+        <a href="Iphone%2014.html">
+            <h2>Iphone 14</h2>
+            <img src="Handys/Iphone_14_1.jpg" alt="Produktbild">
+            <p>609 Fr.</p>
+            <p>Arbeitsspeicher 6 GB</p>
+            <p>Artikelnummer: 205</p>
+            <p>Hersteller: Apple</p>
+            <p>Release Datum: 31.9.2023</p>
+        </a>
+        <button class="add-to-cart" onclick="addToCart({img: 'Handys/Iphone_14_1.jpg',name: 'Iphone 14', price: '609 Fr.'})">Zum Warenkorb hinzufügen</button>
+    </div>
+    <div class="product">
+        <a href="Galaxy%20A54.html">
+            <h2>Galaxy A54</h2>
+            <img src="Handys/Galaxy_A54_1.jpg" alt="Produktbild">
+            <p>350 Fr.</p>
+            <p>Arbeitsspeicher 8 GB</p>
+            <p>Artikelnummer: 674</p>
+            <p>Hersteller: Samsung</p>
+            <p>Release Datum: 13.10.202</p>
+        </a>
+        <button class="add-to-cart" onclick="addToCart({img: 'Handys/Galaxy_A54_1.jpg',name: 'Galaxy A54', price: '350 Fr.'})">Zum Warenkorb hinzufügen</button>
+    </div>
+</div>
+<div class="product-wrapper">
+    <div class="product">
+        <a href="Airpods%20Max.html">
+            <h2>Airpods Max</h2>
+            <img src="Kopfhörer/Airpods_Max.png" alt="Produktbild">
+            <p>Preis: 599 Fr.</p>
+            <p>Hersteller: Apple</p>
+            <p>Aktive Geräuschunterdrückung</p>
+            <p>Transparenzmodus</p>
+        </a>
+        <button onclick="addToCart({img: 'Kopfhörer/Airpods_Max.png',name: 'Airpods Max', price: '599 Fr.'})">In den Warenkorb</button>
+    </div>
+    <div class="product">
+        <a href="Sony.html">
+            <h2>Sony WH-1000XM5</h2>
+            <img src="Kopfhörer/Sony.png" alt="Produktbild">
+            <p>Preis: 349 Fr.</p>
+            <p>Hersteller: Sony</p>
+            <p>Aktive Geräuschunterdrückung</p>
+            <p>Akkulaufzeit bis zu 30 Stunden</p>
+        </a>
+        <button onclick="addToCart({img: 'Kopfhörer/Sony.png',name: 'Sony WH-1000XM5', price: '349 Fr.'})">In den Warenkorb</button>
+    </div>
+    <div class="product">
+        <a href="Skull%20Crusher.html">
+            <h2>Skull Crusher Evo</h2>
+            <img src="Kopfhörer/SkullCrusher.png" alt="Produktbild">
+            <p>Preis: 189 Fr.</p>
+            <p>Hersteller: Skull Candy</p>
+            <p>Bluetooth-Konnektivität</p>
+            <p>Aktive Geräuschunterdrückung</p>
+        </a>
+        <button onclick="addToCart({img: 'Kopfhörer/SkullCrusher.png',name: 'Skull Crusher Evo', price: '189 Fr.'})">In den Warenkorb</button>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Kontakt</h4>
+            <p>Email: luca.braendli@edu.tbz.ch</p>
+            <p>Telefon: +45 076 239 24 09</p>
+        </div>
+        <div class="footer-section">
+            <h4>Folgen Sie uns</h4>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://x.com/">Twitter</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+        </div>
+        <div class="footer-section">
+            <h4>Rechtliches</h4>
+            <a href="#">Datenschutz</a>
+            <a href="#">AGB</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

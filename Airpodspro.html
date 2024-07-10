@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkt Container</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="scripts.js" defer></script>
+
+</head>
+<body>
+<div class="c"><p>Airpods Pro</p></div>
+<div class="container">
+    <div class="navbar">
+        <div class="p"></div>
+        <div  class="dropdown">
+            <div class="dropdown">
+                <form action="Index.html" method="get">
+                    <button type="submit" class="dropbtn no-link">Beliebte Produkte</button>
+                </form>
+                <div class="dropdown-content">
+                </div>
+            </div>
+            <br>
+        </div>
+        <div  class="dropdown">
+            <div class="dropdown">
+                <button class="dropbtn">Produkte</button>
+                <div class="dropdown-content">
+                    <a href="Handys.html">Handys</a>
+                    <a href="Kopfhörer.html">Kopfhörer</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div  class="dropdown">
+            <div class="dropdown">
+                <form action="News.html" method="get">
+                    <button type="submit" class="dropbtn no-link">News</button>
+                </form>
+                <div class="dropdown-content">
+
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <form action="Warenkorb.html" method="get">
+                    <button type="submit" class="dropbtn no-link">
+                        <img src="warenkorb.png" alt="Warenkorb">
+                    </button>
+                </form>
+                <div class="dropdown-content">
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<div class="product-wrapper">
+    <div class="product detail">
+        <h2>Airpods Pro</h2>
+        <img src="Kopfhörer/Airpods_pro.png" alt="Produktbild">
+        <p>Preis: 249 Fr.</p>
+        <p>Die AirPods Pro bieten ein kompaktes und kabelloses Design mit aktiver Geräuschunterdrückung für ein beeindruckendes Klangerlebnis. Sie passen sich automatisch an die Ohrform an und bieten durch den Transparenzmodus die Möglichkeit, Umgebungsgeräusche zu hören. Mit einem verbesserten, adaptiven EQ und einem druckausgleichenden Belüftungssystem bieten sie klaren Klang und Komfort. Die AirPods Pro bieten bis zu 4,5 Stunden Wiedergabezeit pro Ladung und sind mit einem kabellosen Ladecase ausgestattet.</p>
+        <button onclick="addToCart({img: 'Kopfhörer/Airpods_pro.png',name: 'Airpods Pro', price: '249 Fr.'})">In den Warenkorb</button>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Kontakt</h4>
+            <p>Email: luca.braendli@edu.tbz.ch</p>
+            <p>Telefon: +45 076 239 24 09</p>
+        </div>
+        <div class="footer-section">
+            <h4>Folgen Sie uns</h4>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://x.com/">Twitter</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+        </div>
+        <div class="footer-section">
+            <h4>Rechtliches</h4>
+            <a href="#">Datenschutz</a>
+            <a href="#">AGB</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
