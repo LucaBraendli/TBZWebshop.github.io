@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkt Container</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+<div class="c"><p>Iphone 14</p></div>
+<div class="container">
+    <div class="navbar">
+        <div class="p"></div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <form action="Index.html" method="get">
+                    <button type="submit" class="dropbtn no-link">Beliebte Produkte</button>
+                </form>
+                <div class="dropdown-content">
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <button class="dropbtn">Produkte</button>
+                <div class="dropdown-content">
+                    <a href="Handys.html">Handys</a>
+                    <a href="Kopfhörer.html">Kopfhörer</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <form action="News.html" method="get">
+                    <button type="submit" class="dropbtn no-link">News</button>
+                </form>
+                <div class="dropdown-content">
+
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <form action="Kontaktformular.html" method="get">
+                    <button type="submit" class="dropbtn no-link">Kontaktformular</button>
+                </form>
+                <div class="dropdown-content">
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <form action="Warenkorb.html" method="get">
+                    <button type="submit" class="dropbtn no-link">Warenkorb</button>
+                </form>
+                <div class="dropdown-content">
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <form action="Warenkorb.html" method="get">
+                    <button type="submit" class="dropbtn no-link">
+                        <img src="warenkorb.png" alt="Warenkorb">
+                    </button>
+                </form>
+                <div class="dropdown-content">
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<div class="product-wrapper">
+    <div class="product detail">
+        <h2>Iphone 14</h2>
+        <img src="Handys/Iphone_14_1.jpg" alt="Produktbild">
+        <p>609 Fr.</p>
+        <p>Das iPhone 14 besticht mit einem 6,1-Zoll Super Retina XDR Display und ist in einer Vielzahl an stilvollen Farben erhältlich. Ausgestattet mit dem leistungsstarken A16 Bionic Chip bietet es herausragende Geschwindigkeit und Effizienz. Das fortschrittliche Dual-Kamera-System ermöglicht beeindruckende Fotos und 4K Dolby Vision HDR Videoaufnahmen. Mit bis zu 512 GB Speicherplatz und optimiertem Batteriemanagement ist das iPhone 14 die ideale Wahl für Nutzer, die Wert auf Performance und hochwertige Multimedia-Funktionen legen.</p>
+        <button class="add-to-cart" onclick="addToCart({img: 'Handys/Iphone_14_1.jpg',name: 'Iphone 14', price: '609 Fr.'})">Zum Warenkorb hinzufügen</button>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Kontakt</h4>
+            <p>Email: luca.braendli@edu.tbz.ch</p>
+            <p>Telefon: +45 076 239 24 09</p>
+        </div>
+        <div class="footer-section">
+            <h4>Folgen Sie uns</h4>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://x.com/">Twitter</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+        </div>
+        <div class="footer-section">
+            <h4>Rechtliches</h4>
+            <a href="#">Datenschutz</a>
+            <a href="#">AGB</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

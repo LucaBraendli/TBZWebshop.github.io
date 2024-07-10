@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkt Container</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+<div class="c"><p>Sony WH-1000XM5</p></div>
+<div class="container">
+    <div class="navbar">
+        <div class="p"></div>
+        <div class="dropdown">
+            <form action="Index.html" method="get">
+                <button type="submit" class="dropbtn no-link">Beliebte Produkte</button>
+            </form>
+            <br>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Produkte</button>
+            <div class="dropdown-content">
+                <a href="Handys.html">Handys</a>
+                <a href="Kopfhörer.html">Kopfhörer</a>
+            </div>
+            <br>
+        </div>
+        <div class="dropdown">
+            <form action="News.html" method="get">
+                <button type="submit" class="dropbtn no-link">News</button>
+            </form>
+            <br>
+        </div>
+        <div class="dropdown">
+            <form action="Kontaktformular.html" method="get">
+                <button type="submit" class="dropbtn no-link">Kontaktformular</button>
+            </form>
+            <br>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <form action="Warenkorb.html" method="get">
+                    <button type="submit" class="dropbtn no-link">
+                        <img src="warenkorb.png" alt="Warenkorb">
+                    </button>
+                </form>
+                <div class="dropdown-content">
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<div class="product-wrapper">
+    <div class="product detail">
+        <h2>Sony WH-1000XM5</h2>
+        <img src="Kopfhörer/Sony.png" alt="Produktbild">
+        <p>400 Fr.</p>
+        <p>Der Sony WH-1000XM5 bietet erstklassige Geräuschunterdrückung, verbesserten Tragekomfort und eine Akkulaufzeit von bis zu 30 Stunden. Mit dem neuen integrierten V1-Prozessor liefert er unvergleichliche Klangqualität. Der Kopfhörer ist perfekt für Reisen und den täglichen Gebrauch und ermöglicht eine nahtlose Integration mit Sprachassistenten.</p>
+        <button onclick="addToCart({img: 'Kopfhörer/Sony.png',name: 'Sony WH-1000XM5', price: '349 Fr.'})">In den Warenkorb</button>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Kontakt</h4>
+            <p>Email: luca.braendli@edu.tbz.ch</p>
+            <p>Telefon: +45 076 239 24 09</p>
+        </div>
+        <div class="footer-section">
+            <h4>Folgen Sie uns</h4>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://x.com/">Twitter</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+        </div>
+        <div class="footer-section">
+            <h4>Rechtliches</h4>
+            <a href="#">Datenschutz</a>
+            <a href="#">AGB</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
