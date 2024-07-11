@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkt Container</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+<div class="c"><p>Sony WF-1000XM4 </p></div>
+<div class="container">
+    <div class="navbar">
+        <div class="p"></div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <form action="index.html" method="get">
+                    <button type="submit" class="dropbtn no-link">Beliebte Produkte</button>
+                </form>
+                <div class="dropdown-content">
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <button class="dropbtn">Produkte</button>
+                <div class="dropdown-content">
+                    <a href="Handys.html">Handys</a>
+                    <a href="Kopfhörer.html">Kopfhörer</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <form action="News.html" method="get">
+                    <button type="submit" class="dropbtn no-link">News</button>
+                </form>
+                <div class="dropdown-content">
+
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <form action="Kontaktformular.html" method="get">
+                    <button type="submit" class="dropbtn no-link">Kontaktformular</button>
+                </form>
+                <div class="dropdown-content">
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown">
+                <form action="Warenkorb.html" method="get">
+                    <button type="submit" class="dropbtn no-link">
+                        <img src="warenkorb.png" alt="Warenkorb">
+                    </button>
+                </form>
+                <div class="dropdown-content">
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+    <div class="account-button">
+        <img src="img.png" alt="Account" onclick="openAccountForm()">
+    </div>
+    <button id="logoutBtn" style="display:none;" onclick="logout()">Abmelden</button>
+
+    <div id="accountForm" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAccountForm()">&times;</span>
+            <h2>Anmelden</h2>
+            <form id="loginForm" onsubmit="login(event)">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="email" required>
+                <label for="login-password">Passwort:</label>
+                <input type="password" id="login-password" name="password" required>
+                <button type="submit" class="button">Anmelden</button>
+            </form>
+        </div>
+    </div>
+    <div class="product-wrapper">
+        <div class="product detail">
+            <h2>Sony WF-1000XM4 </h2>
+            <img src="Kopfhörer/sony-inear.png" alt="Produktbild">
+            <p>Preis: 200 Fr.</p>
+            <p>Die Sony WF-1000XM4 überzeugen mit exzellenter Klangqualität und aktiver Geräuschunterdrückung. Ihr kompaktes Design und die lange Akkulaufzeit machen sie ideal für unterwegs. Die Touch-Steuerung ermöglicht eine einfache Bedienung, während die adaptive Geräuschsteuerung das Hörerlebnis individuell anpasst. Mit der Sony Headphones Connect App lassen sich Einstellungen personalisieren. Die WF-1000XM4 sind perfekt für anspruchsvolle Nutzer, die auf Qualität und Komfort Wert legen. /p>
+            <button onclick="addToCart({img: 'Kopfhörer/sony-inear.png',name: 'Sony WF-1000XM4', price: '200 Fr.'})">In den Warenkorb</button>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Kontakt</h4>
+            <p>Email: luca.braendli@edu.tbz.ch</p>
+            <p>Telefon: +41 076 239 24 09</p>
+        </div>
+        <div class="footer-section">
+            <h4>Folgen Sie uns</h4>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://x.com/">Twitter</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+        </div>
+        <div class="footer-section">
+            <h4>Rechtliches</h4>
+            <a href="#">Datenschutz</a>
+            <a href="#">AGB</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,3 +1,43 @@
+function openAccountForm() {
+    document.getElementById('accountForm').style.display = 'block';
+}
+
+function closeAccountForm() {
+    document.getElementById('accountForm').style.display = 'none';
+}
+
+function login(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+
+    // Hier kannst du deine Logik für die Anmeldung implementieren.
+    // In diesem Beispiel wird einfach überprüft, ob beide Felder ausgefüllt sind.
+
+    if (email.trim() !== '' && password.trim() !== '') {
+        localStorage.setItem('loggedIn', 'true');
+        document.getElementById('logoutBtn').style.display = 'block';
+        document.getElementById('accountForm').style.display = 'none';
+        alert('Anmeldung erfolgreich!');
+    } else {
+        alert('Bitte geben Sie Ihre Email und Passwort ein.');
+    }
+}
+
+function logout() {
+    localStorage.removeItem('loggedIn');
+    document.getElementById('logoutBtn').style.display = 'none';
+    alert('Abmeldung erfolgreich!');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const loggedIn = localStorage.getItem('loggedIn');
+    if (loggedIn) {
+        document.getElementById('logoutBtn').style.display = 'block';
+    }
+});
+
 function addToCart(product) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.push(product);
@@ -31,7 +71,21 @@ function loadCart() {
         cartContainer.appendChild(cartItem);
     });
 
-    holePrice();
+    calculateTotalPrice();
+}
+
+function calculateTotalPrice() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let totalPrice = 0;
+
+    cart.forEach(item => {
+        // Hier wird der Preis in das richtige Format umgewandelt,
+        // um es zu berechnen (entfernen ' Fr.' und ersetzen ',' durch '.').
+        totalPrice += parseFloat(item.price.replace(' Fr.', '').replace(',', '.'));
+    });
+
+    const totalPriceElement = document.getElementById('total-price');
+    totalPriceElement.textContent = `Gesamtpreis: ${totalPrice.toFixed(2)} Fr`;
 }
 
 function clearCart() {
@@ -44,63 +98,3 @@ document.addEventListener('DOMContentLoaded', function() {
     const clearCartBtn = document.getElementById('clear-cart-btn');
     clearCartBtn.addEventListener('click', clearCart);
 });
-
-function holePrice() {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let totalPrice = 0;
-
-    cart.forEach(item => {
-        totalPrice += parseFloat(item.price);
-    });
-
-    const totalPriceElement = document.getElementById('total-price');
-    totalPriceElement.textContent = `Gesamtpreis: ${totalPrice.toFixed(2)} Fr`;
-}
-document.addEventListener('DOMContentLoaded', (event) => {
-    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
-});
-
-const emailArray = [];
-
-document.getElementById('newsletterForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const email = document.getElementById('email').value;
-    const messageElement = document.getElementById('message');
-
-    if (email && validateEmail(email)) {
-        emailArray.push(email);
-        messageElement.textContent = 'Vielen Dank für Ihre Anmeldung!';
-        messageElement.style.color = 'green';
-        document.getElementById('newsletterForm').reset();
-
-        sendEmails(email);
-    } else {
-        messageElement.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
-        messageElement.style.color = 'red';
-    }
-});
-
-function sendEmails(newEmail) {
-    const messageElement = document.getElementById('message');
-
-    emailArray.forEach(email => {
-        const templateParams = {
-            to_email: email,
-            from_email: newEmail,
-            message: 'Dies ist unser neuester Newsletter!'
-        };
-
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-            .then(function(response) {
-                console.log('Emails sent successfully!');
-            }, function(error) {
-                console.error('Failed to send emails:', error);
-            });
-    });
-}
-
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-}

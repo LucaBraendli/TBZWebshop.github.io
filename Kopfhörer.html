@@ -52,6 +52,24 @@
         </div>
     </div>
 </div>
+<div class="account-button">
+    <img src="img.png" alt="Account" onclick="openAccountForm()">
+</div>
+<button id="logoutBtn" style="display:none;" onclick="logout()">Abmelden</button>
+
+<div id="accountForm" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeAccountForm()">&times;</span>
+        <h2>Anmelden</h2>
+        <form id="loginForm" onsubmit="login(event)">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required>
+            <label for="login-password">Passwort:</label>
+            <input type="password" id="login-password" name="password" required>
+            <button type="submit" class="button">Anmelden</button>
+        </form>
+    </div>
+</div>
 <div class="product-wrapper">
     <div class="product">
         <a href="Airpods%20Max.html">
@@ -111,12 +129,15 @@
         <button onclick="addToCart({img: 'Kopfhörer/Sony.png',name: 'Sony WH-1000XM5', price: '349 Fr.'})">In den Warenkorb</button>
     </div>
     <div class="product">
-        <h2>Produkt3</h2>
-        <img src="bild3" alt="Produktbild">
-        <p>Preis</p>
-        <p>Produktfakten</p>
-        <p>Kurzbeschreibung</p>
-        <button onclick="addToCart({name: 'Produkt3', price: 'Preis'})">In den Warenkorb</button>
+    <a href="SonyWF-1000XM4.html">
+        <h2>Sony WF-1000XM4 </h2>
+        <img src="Kopfhörer/sony-inear.png" alt="Produktbild">
+        <p>Preis: 200 Fr.</p>
+        <p>Hersteller: Sony</p>
+        <p>Kabellos</p>
+        <p>Akulaufzeit bis zu 12 Stunden</p>
+    </a>
+        <button onclick="addToCart({img: 'Kopfhörer/Sony-inear.png', name: 'Sony WF-1000XM4', price: '200 Fr.'})">In den Warenkorb</button>
     </div>
 </div>
 <footer class="footer">
