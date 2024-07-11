@@ -17,7 +17,7 @@
             <form action="index.html" method="get">
                 <button type="submit" class="dropbtn no-link">Beliebte Produkte</button>
             </form>
-            <div class="dropdown-content"></div>
+            <br>
         </div>
         <div class="dropdown">
             <button class="dropbtn">Produkte</button>
@@ -25,18 +25,19 @@
                 <a href="Handys.html">Handys</a>
                 <a href="Kopfhörer.html">Kopfhörer</a>
             </div>
+            <br>
         </div>
         <div class="dropdown">
             <form action="News.html" method="get">
                 <button type="submit" class="dropbtn no-link">News</button>
             </form>
-            <div class="dropdown-content"></div>
+            <br>
         </div>
         <div class="dropdown">
-            <form action="Kontaktformular.html" method="post">
+            <form action="Kontaktformular.html" method="get">
                 <button type="submit" class="dropbtn no-link">Kontaktformular</button>
             </form>
-            <div class="dropdown-content"></div>
+            <br>
         </div>
         <div class="dropdown">
             <div class="dropdown">
@@ -45,29 +46,31 @@
                         <img src="warenkorb.png" alt="Warenkorb">
                     </button>
                 </form>
-                <div class="dropdown-content"></div>
+                <div class="dropdown-content">
+                </div>
             </div>
             <br>
         </div>
     </div>
-    <div class="account-button">
-        <img src="img.png" alt="Account" onclick="openAccountForm()">
+</div>
+<div class="account-button">
+    <img src="img.png" alt="Account" onclick="openAccountForm()">
+</div>
+<button id="logoutBtn" style="display:none;" onclick="logout()">Abmelden</button>
+<div id="accountForm" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeAccountForm()">&times;</span>
+        <h2>Anmelden</h2>
+        <form id="loginForm" onsubmit="login(event)">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required>
+            <label for="login-password">Passwort:</label>
+            <input type="password" id="login-password" name="password" required>
+            <button type="submit" class="button">Anmelden</button>
+        </form>
     </div>
-    <button id="logoutBtn" style="display:none;" onclick="logout()">Abmelden</button>
+</div>
 
-    <div id="accountForm" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeAccountForm()">&times;</span>
-            <h2>Anmelden</h2>
-            <form id="loginForm" onsubmit="login(event)">
-                <label for="login-email">Email:</label>
-                <input type="email" id="login-email" name="email" required>
-                <label for="login-password">Passwort:</label>
-                <input type="password" id="login-password" name="password" required>
-                <button type="submit" class="button">Anmelden</button>
-            </form>
-        </div>
-    </div>
     <div id="cart">
         <div id="cart-container"></div>
         <p id="total-price">Gesamtpreis: 0.00 Fr</p>
