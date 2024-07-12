@@ -94,3 +94,5 @@ document.addEventListener('DOMContentLoaded', function() {
     clearCartBtn.addEventListener('click', clearCart);
 });
 
+
+
