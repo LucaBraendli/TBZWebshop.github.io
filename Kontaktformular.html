@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontaktformular</title>
     <link rel="stylesheet" href="css.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
+<header>
 <div class="c"><p>Kontaktformular</p></div>
 
 <div class="container">
@@ -76,6 +78,9 @@
             </form>
         </div>
     </div>
+</div>
+</header>
+<main>
     <h2>Kontaktseite</h2>
 
     <h3>Unser Team</h3>
@@ -90,31 +95,31 @@
             <td>Luca Braendli</td>
         </tr>
     </table>
-
     <section>
         <h3>Kontaktformular</h3>
-        <form action="https://api.emailjs.com/api/v1.0/email/send" method="post">
-            <input type="hidden" name="service_id" value="service_uadk61d">
-            <input type="hidden" name="template_id" value="template_xrbfx7s">
-            <input type="hidden" name="user_id" value="fFNYYktxm7PAqD1rE">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">E-Mail:</label>
-            <input type="email" id="email" name="email" required>
+        <form action="mailto:deine_email@deine_domain.com" method="post" enctype="text/plain">
+            <label for="fullname">Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email_id">E-Mail:</label>
+            <input type="email" id="email_id" name="email_id" required>
+
             <label for="subject">Betreff:</label>
-            <select id="subject" name="Betreff" required>
+            <select id="subject" name="subject" required>
                 <option value="">Bitte wählen Sie einen Betreff aus</option>
                 <option value="Frage zum Produkt">Frage zum Produkt</option>
                 <option value="Bestellung">Bestellung</option>
                 <option value="Reklamation">Reklamation</option>
                 <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
             </select>
+
             <label for="message">Nachricht:</label>
-            <textarea id="message" name="Nachricht" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
             <button type="submit" class="button">Absenden</button>
         </form>
     </section>
-</div>
+</main>
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-section">

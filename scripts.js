@@ -12,9 +12,6 @@ function login(event) {
     const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
 
-    // Hier kannst du deine Logik für die Anmeldung implementieren.
-    // In diesem Beispiel wird einfach überprüft, ob beide Felder ausgefüllt sind.
-
     if (email.trim() !== '' && password.trim() !== '') {
         localStorage.setItem('loggedIn', 'true');
         document.getElementById('logoutBtn').style.display = 'block';
@@ -79,8 +76,6 @@ function calculateTotalPrice() {
     let totalPrice = 0;
 
     cart.forEach(item => {
-        // Hier wird der Preis in das richtige Format umgewandelt,
-        // um es zu berechnen (entfernen ' Fr.' und ersetzen ',' durch '.').
         totalPrice += parseFloat(item.price.replace(' Fr.', '').replace(',', '.'));
     });
 
@@ -98,3 +93,4 @@ document.addEventListener('DOMContentLoaded', function() {
     const clearCartBtn = document.getElementById('clear-cart-btn');
     clearCartBtn.addEventListener('click', clearCart);
 });
+
